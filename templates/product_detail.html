@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}Product details{% endblock title%}
+
+{% block content%}
+<header>
+    <a href="{% url 'update' product.pk%}">Update products</a> |
+    <a href="{% url 'delete' product.pk%}">Delete products</a>
+</header>
+<h1>Product details</h1>
+<img src="{{product.Image.url}}" class="rounded mx-auto d-block" alt="">
+<style>
+    div {
+      text-align: center;
+    }
+  </style>
+  
+  <div>
+<p>{{product.name}}</p>
+<p>{{product.detail}}</p>
+<p>{{product.price}}تومان</p>
+<div/>
+{% endblock content%}
